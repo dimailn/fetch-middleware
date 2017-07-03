@@ -1,5 +1,5 @@
 {
-  "name": "fetch-middleware",
+  "name": "fetch-middleware-for-redux",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -7,6 +7,10 @@
   "scripts": {
     "build": "coffee -o lib/ -c src/",
     "pub": "npm run build && npm publish"
+  },
+  "author": {
+    "name": "Dmitry Sadovsky",
+    "email": "dimailn9@gmail.com"
   },
   "dependencies": {
     "axios": "^0.16.2",
