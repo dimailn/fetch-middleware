@@ -1,0 +1,17 @@
+{
+  "name": "fetch-middleware",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Fetch middleware for Redux",
+  "scripts": {
+    "build": "coffee -o lib/ -c src/",
+    "pub": "npm run build && npm publish"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "coffee-script": "^1.12.6",
+    "es6-promise": "^4.1.1",
+    "lodash": "^4.17.4"
+  }
+}
