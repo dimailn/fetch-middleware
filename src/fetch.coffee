@@ -16,8 +16,8 @@ module.exports = (store) -> (next) -> (action) ->
 
   action.payload = axios(fetch)
     .then(
-      (result) -> Promise.resolve result.data
-      (result) -> Promise.reject result.data
+      (result) -> Promise.resolve result
+      (result) -> Promise.reject result
     )
 
   next action

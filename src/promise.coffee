@@ -16,10 +16,10 @@ module.exports = ({dispatch}) -> (next) -> (action) ->
 
   Promise.ensure(action.payload).then(
     (result) ->
-      dispatch { type: SUCCESS, payload: result, meta: _.extend action.meta, {done: true} }
+      dispatch { type: SUCCESS, payload: result.data, response: result, meta: _.extend action.meta, {done: true} }
       result
 
     (error) ->
-      dispatch { type: FAILURE, payload: error, error: true, meta: _.extend action.meta, {done: true} }
+      dispatch { type: FAILURE, payload: error.data, response: error, error: true, meta: _.extend action.meta, {done: true} }
       Promise.reject error
   )
